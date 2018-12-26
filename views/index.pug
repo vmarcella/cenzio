@@ -1,5 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    div#container()
+        div#header()
+            h1= title
+            p Hello, and welcome to cenz.io! This is a listing 
+                | for all products and projects that I've created that are a 
+                | subdomain of cenz.io. Enjoy!
+        div#listing()
+            h2 Listing
+            div.projectCard()
+                div.projectDesc()
+                    a(href='https://breakout.cenz.io') breakout
+                    p A recreation of the classic game, breakout.
+                div.projectLink()
+                    a(href='https://breakout.cenz.io') breakout.cenz.io
