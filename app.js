@@ -5,12 +5,17 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+// configure env variables
+require('dotenv').config();
+
 // Import our routers
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
 // create our server
 const app = express();
+
+const dbConnection = require('./data/cenzio-db');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
